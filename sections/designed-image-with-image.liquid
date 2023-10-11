@@ -11,14 +11,14 @@
     <div class="designer-slider">
        <div class="slidersforproduct">
           {% for product in product.collections %}
-             {% render 'card-product' 
-             card_product: product,
-             media_aspect_ratio: section.settings.image_ratio,
-             show_secondary_image: section.settings.show_secondary_image,
-             show_vendor: section.settings.show_vendor,
-             show_rating: section.settings.show_rating,
-             lazy_load: lazy_load,
-             show_quick_add: section.settings.enable_quick_add,
+             {% render 'card-product', 
+               card_product: product,
+               media_aspect_ratio: section.settings.image_ratio,
+               show_secondary_image: section.settings.show_secondary_image,
+               show_vendor: section.settings.show_vendor,
+               show_rating: section.settings.show_rating,
+               lazy_load: lazy_load,
+               show_quick_add: section.settings.enable_quick_add,
              %}
           {% endfor %}  
        </div>
