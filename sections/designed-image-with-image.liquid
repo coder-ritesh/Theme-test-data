@@ -8,6 +8,21 @@
        {{ section.settings.new-name }}
      {% endif %}
     </div>
+    <div class="designer-slider">
+       <div class="slidersforproduct">
+          {% for product in product.collections %}
+             {% render 'card-product' 
+             card_product: product,
+             media_aspect_ratio: section.settings.image_ratio,
+             show_secondary_image: section.settings.show_secondary_image,
+             show_vendor: section.settings.show_vendor,
+             show_rating: section.settings.show_rating,
+             lazy_load: lazy_load,
+             show_quick_add: section.settings.enable_quick_add,
+             %}
+          {% endfor %}  
+       </div>
+    </div>
   </div>
 </div>
 {% schema %}
@@ -24,7 +39,52 @@
         "type":"richtext",
         "id":"new-name",
         "label":"Content"
-      }
+      },
+      {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+        },
+        {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    }
     ],
     "presets":[
       {
