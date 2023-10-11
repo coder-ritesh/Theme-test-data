@@ -9,8 +9,9 @@
      {% endif %}
     </div>
     <div class="designer-slider">
-       <div class="slidersforproduct">
+       <div class="slidersforproduct main-carousel">
           {% for product in product.collections %}
+            <div class="carousel-cell">
              {% render 'card-product' 
              card_product: product,
              media_aspect_ratio: section.settings.image_ratio,
@@ -19,7 +20,7 @@
              show_rating: section.settings.show_rating,
              lazy_load: lazy_load,
              show_quick_add: section.settings.enable_quick_add,
-             %}
+             %}</div>
           {% endfor %}  
        </div>
     </div>
