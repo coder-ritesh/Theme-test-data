@@ -4,6 +4,9 @@
      {% if section.settings.name != blank %}  
       <h2>{{ section.settings.name }}</h2>
      {% endif %}
+     {% if section.settings.new-name != blank %}
+       {{ section.settings.new-name }}
+     {% endif %}
     </div>
   </div>
 </div>
@@ -16,6 +19,11 @@
         "type":"richtext",
         "id":"name",
         "label":"Add Title"
+      },
+      {
+        "type":"richtext",
+        "id":"new-name",
+        "label":"Content"
       }
     ],
     "presets":[
