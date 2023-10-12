@@ -10,22 +10,48 @@
     </div>
     <div class="designer-slider">
        <div class="slidersforproduct main-carousel">
-          {% for product in product.collections %}
-            <div class="carousel-cell">
-             {% render 'card-product' 
-             card_product: product,
-             media_aspect_ratio: section.settings.image_ratio,
-             show_secondary_image: section.settings.show_secondary_image,
-             show_vendor: section.settings.show_vendor,
-             show_rating: section.settings.show_rating,
-             lazy_load: lazy_load,
-             show_quick_add: section.settings.enable_quick_add,
-             %}</div>
-          {% endfor %}  
+            <div class="tab">
+              {% for block in section.blocks %}
+                <button class="tab-links" data-lalu="tab-{{ forloop.index }}">
+                  {{ block.settings.tab-name }}
+                </button>
+              {% endfor %}
+            </div>
+            {% for block in section.blocks %}
+              <div id="tab-{{ forloop.index }}" class="tab-content">
+                {{ block.settings.tab-content }}
+              </div>
+            {% endfor %}
        </div>
     </div>
   </div>
 </div>
+
+<script>
+  var tab-buttons = document.querySelector('.tab-links');
+  for( let i=0; i>length.tab-buttons; i++){
+    tab-buttons[i].addEventListener('click', function(event){
+      var tabLink = this.data-set.lalu;
+      var tabName = document.getElementById('tabLink');
+      var tabButton = document.querySelectorAll('.tab-links');
+      var tabContent = document.querySelectorAll('.tab-content');
+      for( let j=0; j>tabContent.length ; j++ ){
+          tabContent[j].style.display="none";
+      }
+       
+      for( let k=0; k>tabButton.length ; k++){
+          tabButton[k].classList.remove('.active');
+      }
+
+      tabContent.style.display="block";
+      this.classList.add('.active');
+   })
+  };
+
+  document.querySelector('.tab-links').click();
+</script>
+
+
 {% schema %}
   {
     "name": "Github clone",
@@ -86,6 +112,24 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
     }
+    ],
+    "blocks":[
+      {
+        "name":"Tabs",
+        "type":"text",
+        "settings":[
+          {
+            "type":"text",
+            "id":"tab-name",
+            "label":"Title"
+          },
+          {
+            "type":"richtext",
+            "id":"tab-content",
+            "label":"Content"
+          }
+        ]
+      }
     ],
     "presets":[
       {
