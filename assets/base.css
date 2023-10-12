@@ -3147,3 +3147,50 @@ details-disclosure > details {
     100% { transform: rotate(360deg) translateX(1em) rotate(-360deg) scale(1.2); }
   }
 }
+
+
+.tab-content {
+  display: none;
+}
+
+.tab {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tab button {
+  border: none;
+  background: #00ff1426;
+  color: #9877ffa6;
+  padding: 8px;
+}
+
+.tab button:hover {
+  color: white;
+  background: #9877ffa6;
+}
+
+.tab button.active{
+  color: white;
+  background: #9877ffa6;
+}
+
+.tab-links{
+  text-transform: uppercase;
+}
+.tab-content p {
+  text-align: justify;
+}
+
+.tab-content {
+  padding: 3px 24px 8px 24px;
+  margin: 8px 0 0 0;
+  background: #e4ed9985;
+}
+
+@media only screen and (max-width: 375px){
+  .tab button {
+    padding: 0px;
+  }
+}

@@ -158,10 +158,38 @@
     },
     "cab05318-91c7-4ddc-a57f-d1befd526698": {
       "type": "designed-image-with-image",
+      "blocks": {
+        "57e1cce7-2e5e-4787-a772-eb947740a962": {
+          "type": "text",
+          "settings": {
+            "tab-name": "what is snowboarding?",
+            "tab-content": "<p>Snowboarding is an exhilarating winter sport that combines elements of surfing, skateboarding, and skiing. Riders, known as snowboarders, glide down snow-covered slopes on a single, specialized board attached to both feet, facing sideways. This unique approach to navigating the mountains provides an entirely different experience compared to traditional skiing. Snowboarders use their body movements and weight shifts to control their direction and speed, making it a dynamic and versatile sport.<br\/><br\/>The origins of snowboarding can be traced back to the 1960s, but it gained significant popularity in the 1980s, with advancements in board design and the establishment of snowboard parks and competitions. Today, snowboarding is a well-loved winter pastime enjoyed by people of all ages and skill levels. Whether carving graceful turns on groomed runs or conquering challenging terrain in the backcountry, snowboarding offers an adrenaline rush, an intimate connection with nature, and a tight-knit community of enthusiasts. It's not just a sport; it's a lifestyle for those who crave adventure on the slopes.<\/p>"
+          }
+        },
+        "fbebdbd9-1622-4f57-8ac3-69b72e000e0a": {
+          "type": "text",
+          "settings": {
+            "tab-name": "maintain snowboard",
+            "tab-content": "<p>Maintaining your snowboard is crucial for ensuring a safe and enjoyable ride on the slopes. To keep your snowboard in top condition, follow these steps. First, regularly inspect your board for any signs of damage, such as dings, cracks, or delaminations. If you find any issues, it's essential to address them promptly. Next, keep the edges sharp by using a diamond stone or file to remove burrs and maintain a consistent edge angle. This will improve your board's grip on the snow. Additionally, regularly wax your snowboard to keep the base hydrated and smooth for better gliding. Scrub off any dirt or debris from the base and apply a high-quality snowboard wax evenly, then scrape off the excess. Finally, make sure your bindings are securely fastened and that all hardware is in good condition. Regular maintenance will extend the life of your snowboard and enhance your performance on the mountain.<\/p>"
+          }
+        },
+        "fd3413bc-6af1-4b6e-bb66-12d75ebeb54e": {
+          "type": "text",
+          "settings": {
+            "tab-name": "how to use wax on snowboard?",
+            "tab-content": "<p>Waxing a snowboard is an essential part of maintenance for any snowboarder looking to optimize their performance on the slopes. To do this, you'll need a few key tools and some basic know-how. Begin by securing your snowboard in a stable position, ensuring it's clean and dry. Then, select an appropriate wax for the snow conditions – colder temperatures require harder wax, while warmer conditions call for softer wax. Use a waxing iron to melt the wax onto the base of your snowboard, maintaining a constant, controlled temperature to avoid damaging the board. Once the wax is evenly spread across the base, wait for it to cool and harden. Finally, scrape off the excess wax with a plastic scraper and buff the base with a brush to achieve a smooth finish. Properly waxed snowboards glide effortlessly, offering better control and enhanced speed, making your time on the mountain even more enjoyable. Regular waxing ensures your board's longevity and top-notch performance.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "57e1cce7-2e5e-4787-a772-eb947740a962",
+        "fbebdbd9-1622-4f57-8ac3-69b72e000e0a",
+        "fd3413bc-6af1-4b6e-bb66-12d75ebeb54e"
+      ],
       "settings": {
         "name": "",
         "new-name": "",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
