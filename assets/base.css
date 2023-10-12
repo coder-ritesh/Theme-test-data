@@ -3170,7 +3170,7 @@ details-disclosure > details {
   background: #9877ffa6;
 }
 
-.tab button:active{
-  color:  #00ff1426;
-  background: #019A69;
+.tab button.active{
+  color: white;
+  background: #9877ffa6;
 }
