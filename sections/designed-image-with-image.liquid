@@ -29,17 +29,17 @@
 
 <script>
   var tabButtons = document.querySelector('.tab-links');
-  for( let i=0; i<tabButtons.length; i++){
+  for( var i=0; i<tabButtons.length; i++){
     tabButtons[i].addEventListener('click', function(event){
-      var tabLink = this.data-set.lalu;
+      var tabLink = this.dataset.lalu;
       var tabName = document.getElementById('tabLink');
       var tabButton = document.querySelectorAll('.tab-links');
       var tabContent = document.querySelectorAll('.tab-content');
-      for( let j=0; j>tabContent.length ; j++ ){
+      for( var j=0; j < tabContent.length ; j++ ){
           tabContent[j].style.display="none";
       }
        
-      for( let k=0; k>tabButton.length ; k++){
+      for( var k=0; k < tabButton.length ; k++){
           tabButton[k].classList.remove('.active');
       }
 
