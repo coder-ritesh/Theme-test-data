@@ -3147,3 +3147,30 @@ details-disclosure > details {
     100% { transform: rotate(360deg) translateX(1em) rotate(-360deg) scale(1.2); }
   }
 }
+
+
+.tab-content {
+  display: none;
+}
+
+.tab {
+  width: 500px;
+  overflow: hidden;
+}
+
+.tab button {
+  border: none;
+  background: #00ff1426;
+  color: #9877ffa6;
+  padding: 8px;
+}
+
+.tab button:hover {
+  color: white;
+  background: #9877ffa6;
+}
+
+.tab button:active{
+  color:  #00ff1426;
+  background: #019A69;
+}
