@@ -3189,7 +3189,7 @@ details-disclosure > details {
   background: #e4ed9985;
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 375px){
   .tab button {
     padding: 0px;
   }
