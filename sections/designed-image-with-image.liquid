@@ -35,6 +35,7 @@
       var tabName = document.getElementById(tabLink);
       var tabButton = document.querySelectorAll(".tab-links");
       var tabContent = document.querySelectorAll(".tab-content");
+      
       for( var j=0; j < tabContent.length ; j++ ){
           tabContent[j].style.display="none";
       }
@@ -45,8 +46,8 @@
 
       tabContent.style.display="block";
       this.classList.add("active");
-   })
-  };
+   });
+  }
 
   document.querySelector(".tab-links").click();
 </script>
