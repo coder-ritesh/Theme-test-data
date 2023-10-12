@@ -28,28 +28,27 @@
 </div>
 
 <script>
-  var tabButtons = document.querySelectorAll('.tab-links');
-  for( var i=0; i<tabButtons.length; i++){
-    tabButtons[i].addEventListener('click', function(){
-      var tabLink = this.dataset.lalu;
-      var tabName = document.getElementById(tabLink);
-      var tabButton = document.querySelectorAll(".tab-links");
-      var tabContent = document.querySelectorAll(".tab-content");
-      
-      for( var j=0; j < tabContent.length ; j++ ){
-          tabContent[j].style.display="none";
+   var tabButton = document.querySelectorAll('.tab-links');
+   
+   for(var i = 0; i<tabButton.length; i++){
+    tabButton[i].addEventListener('click', function(){
+      var tabData = this.dataset.lalu;
+      var tabName = document.getElementById(tabData);
+      var tabButtons = document.querySelector('tab-links');
+      var tabContent = document.querySelector('tab-content');
+      for(var j = 0; j<tabContent.length; j++){
+        tabContent[j].style.display = "none";
       }
-       
-      for( var k=0; k < tabButton.length ; k++){
-          tabButton[k].classList.remove("active");
+      for(var k = 0; k < tabButtons.length; k++){
+        tabButtons.classList.remove('active');
       }
 
+      this.classList.add('active');
       tabName.style.display="block";
-      this.classList.add("active");
-   });
-  }
+    })
+   }
 
-  document.querySelector(".tab-links").click();
+  document.querySelector('.tab-links').click();
 </script>
 
 
