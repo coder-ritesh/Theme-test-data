@@ -3188,3 +3188,9 @@ details-disclosure > details {
   margin: 8px 0 0 0;
   background: #e4ed9985;
 }
+
+@media only screen and (max-width: 425px){
+  .tab-links {
+    padding: 0px;
+  }
+}
