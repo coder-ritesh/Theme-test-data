@@ -3154,8 +3154,9 @@ details-disclosure > details {
 }
 
 .tab {
-  width: 500px;
+  width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
 .tab button {
@@ -3173,4 +3174,17 @@ details-disclosure > details {
 .tab button.active{
   color: white;
   background: #9877ffa6;
+}
+
+.tab-links{
+  text-transform: uppercase;
+}
+.tab-content p {
+  text-align: justify;
+}
+
+.tab-content {
+  padding: 3px 24px 8px 24px;
+  margin: 8px 0 0 0;
+  background: #e4ed9985;
 }
