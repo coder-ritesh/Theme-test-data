@@ -34,13 +34,13 @@
     tabButton[i].addEventListener('click', function(){
       var tabData = this.dataset.lalu;
       var tabName = document.getElementById(tabData);
-      var tabButtons = document.querySelector('tab-links');
-      var tabContent = document.querySelector('tab-content');
+      var tabButtons = document.querySelectorAll('.tab-links');
+      var tabContent = document.querySelectorAll('.tab-content');
       for(var j = 0; j<tabContent.length; j++){
         tabContent[j].style.display = "none";
       }
       for(var k = 0; k < tabButtons.length; k++){
-        tabButtons.classList.remove('active');
+        tabButtons[k].classList.remove('active');
       }
 
       this.classList.add('active');
