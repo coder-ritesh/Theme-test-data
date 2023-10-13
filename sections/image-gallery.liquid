@@ -2,7 +2,7 @@
   <div class="page-width">
      <div class="image-gallery zoom-gallery">
          {% for block in section.blocks %}
-            <a href="{{ block.settings.image-gallery }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
+            <a href="{{ block.settings.image-gallery }}" title="{{ block.settings.image-gallery.alt }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
              <img src="{{ block.settings.image-gallery |  image_url: width:1024 }}" width="1024" height="1024" alt="{{ block.settings.image-gallery.alt }}" loading="lazy" />
             </a>
         {% endfor %}   
