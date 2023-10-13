@@ -3195,16 +3195,17 @@ details-disclosure > details {
   }
 }
 
-/* .image-gallery.zoom-gallery img {
+.image-gallery.zoom-gallery img {
   width: 100%;
   height: 143%;
 }
+
 
 .image-gallery.zoom-gallery {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-} */
+} 
 
 
 
