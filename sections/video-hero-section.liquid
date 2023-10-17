@@ -77,9 +77,9 @@
             | video_tag:
               image_size: "1100x",
               loop: section.settings.enable_video_looping,
-              controls: false,
-              muted: false,
-              autoplay : true
+              controls: false, 
+              muted: true, 
+              autoplay: true
           }}
         {%- endif -%}
       </div>
@@ -124,6 +124,9 @@
               allow="autoplay; encrypted-media"
               allowfullscreen
               title="{{ section.settings.description | escape }}"
+              allow="autoplay"
+              frameborder="0"
+              allowfullscreen
             ></iframe>
           {%- else -%}
             <iframe
@@ -132,6 +135,9 @@
               allow="autoplay; encrypted-media"
               allowfullscreen
               title="{{ section.settings.description | escape }}"
+              allow="autoplay"
+              frameborder="0"
+              allowfullscreen
             ></iframe>
           {%- endif -%}
         {%- else -%}
@@ -141,7 +147,7 @@
               autoplay: true,
               loop: section.settings.enable_video_looping,
               controls: false,
-              muted: false,
+              muted: true
           }}
         {%- endif -%}
       </template>
@@ -183,6 +189,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_autoplay",
+      "label": "t:sections.video.settings.enable_video_autoplay.label",
+      "default": true
     },
     {
       "type": "checkbox",
@@ -296,3 +308,7 @@
   ]
 }
 {% endschema %}
+
+
+
+
