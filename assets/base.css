@@ -3227,7 +3227,7 @@ details-disclosure > details {
 .mfp-with-zoom.mfp-ready .mfp-container {
 		opacity: 1;
     background: #000000a8;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .mfp-with-zoom.mfp-ready.mfp-bg {
 		opacity: 0.8;
