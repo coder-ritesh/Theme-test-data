@@ -2,7 +2,7 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  <h1 class="title title--primary inline-richtext khoone">{{ section.settings.title }}</h1>
+  <h1 class="title title--primary inline-richtext">{{ section.settings.title }}</h1>
   {%- liquid
     case section.settings.sort
       when 'products_high', 'products_low'
@@ -21,22 +21,7 @@
       assign paginate_by = 28
     endif
   -%}
-  {% liquid
-     assign collections = site.collections | sort: 'label' 
-     assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
   {%- paginate collections by paginate_by -%}
-    {% for letter in alphabet %}
-  {% assign collections_for_letter = collections | where: "label", "begins_with: #{letter}" %}
-  
-  {% if collections_for_letter.size > 0 %}
-    <h2>{{ letter }}</h2>
-    <ul>
-      {% for collection in collections_for_letter %}
-        <li class="khoone"><a href="{{ collection.url }}">{{ collection.label }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endfor %}
     <ul
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"
