@@ -57,7 +57,7 @@
   {% assign collections_for_letter = collections | where: "label", "begins_with: #{letter}" %}
   
   {% if collections_for_letter.size > 0 %}
-    <h2>{{ letter }}</h2>
+    <h2 class="collection-newsletters">{{ letter }}</h2>
     <ul>
       {% for collection in collections_for_letter %}
         <li><a href="{{ collection.url }}">{{ collection.label }}</a></li>
