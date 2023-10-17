@@ -77,7 +77,7 @@
             | video_tag:
               image_size: "1100x",
               loop: section.settings.enable_video_looping,
-              controls: false,
+              controls: true,
               muted: false
           }}
         {%- endif -%}
@@ -90,7 +90,7 @@
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
       {% endif %}
     >
-      {% comment %} <button
+      <button
         id="Deferred-Poster-Modal-{{ video_id }}"
         class="video-section__poster media deferred-media__poster media--landscape"
         type="button"
@@ -107,7 +107,7 @@
         <span class="deferred-media__poster-button motion-reduce">
           {%- render 'icon-play' -%}
         </span>
-      </button> {% endcomment %}
+      </button>
       <template>
         {%- if section.settings.video == null and section.settings.video_url != null -%}
           {%- liquid
@@ -139,7 +139,7 @@
               image_size: "1100x",
               autoplay: true,
               loop: section.settings.enable_video_looping,
-              controls: false,
+              controls: true,
               muted: false
           }}
         {%- endif -%}
