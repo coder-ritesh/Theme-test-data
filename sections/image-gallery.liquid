@@ -23,9 +23,7 @@
              <img src="{{ block.settings.image-gallery |  image_url: width:1024 }}" width="1024" height="1024" alt="{{ block.settings.image-gallery.alt }}" loading="lazy" />
             </a></div>
         {% endfor %} 
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div> 
+      </div> 
     </div>
   </div>
 </div>
@@ -67,10 +65,6 @@ var swiper = new Swiper(".mySwiper", {
       delay: 2500,
       disableOnInteraction: false,
     },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
     breakpoints: {
     // when window width is >= 320px
     425:{
