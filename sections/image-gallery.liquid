@@ -46,6 +46,7 @@
 
 
 var swiper = new Swiper(".mySwiper", {
+    sliderPerView:1,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -60,6 +61,26 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+    // when window width is >= 320px
+    425:{
+      slidesPerView:1,
+      spaceBetween:20
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 480px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    // when window width is >= 640px
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 50
+    }
   });
 </script>
 
