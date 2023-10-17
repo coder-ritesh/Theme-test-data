@@ -77,8 +77,9 @@
             | video_tag:
               image_size: "1100x",
               loop: section.settings.enable_video_looping,
-              controls: true,
-              muted: false
+              controls: false,
+              muted: false,
+              autoplay : true
           }}
         {%- endif -%}
       </div>
@@ -140,7 +141,7 @@
               autoplay: true,
               loop: section.settings.enable_video_looping,
               controls: true,
-              muted: false
+              muted: false,
           }}
         {%- endif -%}
       </template>
