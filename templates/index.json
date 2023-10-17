@@ -241,6 +241,21 @@
       "settings": {
         "enable_desktop_slider": true
       }
+    },
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=ysB0-Q3CJks",
+        "cover_image": "shopify:\/\/shop_images\/ValerianDucourtil_Mayrhofen_2Z7A2508_MattGEORGES-featured.jpg",
+        "description": "snowboarding video",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -249,6 +264,7 @@
     "f1552b18-6017-4231-810d-74e61da22c37",
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
     "cab05318-91c7-4ddc-a57f-d1befd526698",
-    "1682a4f4-55c7-4122-965c-6df4464d611c"
+    "1682a4f4-55c7-4122-965c-6df4464d611c",
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1"
   ]
 }
