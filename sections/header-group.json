@@ -9,9 +9,9 @@
           "type": "announcement",
           "settings": {
             "text": "Hola snowboarder  welcome to the world of snow",
-            "text_alignment": "center",
+            "text_alignment": "right",
             "color_scheme": "accent-2",
-            "link": ""
+            "link": "shopify:\/\/collections\/hydrogen"
           }
         }
       },
