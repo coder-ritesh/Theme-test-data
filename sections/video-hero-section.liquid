@@ -15,14 +15,11 @@
   }
 {%- endstyle -%}
 
-{%-  liquid  
-     assign video_id = section.settings.video.id | default: section.settings.video_url.id
--%}
 
 <div class="video-section">
   <div class="video-wrapper">
     {% if section.settings.video %}
-      {{ video_id | video_tag: 
+      {{ section.settings.video | video_tag: 
         image_size: "1100x",
         loop: true,
         controls: false,
