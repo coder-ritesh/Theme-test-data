@@ -256,6 +256,22 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "f451f502-2c53-49a9-b6a6-d244b743c9d1": {
+      "type": "video-hero-section",
+      "settings": {
+        "heading": "",
+        "heading_size": "h0",
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/Sample-MP4-Video-File-Download (1).mp4",
+        "video_url": "",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -265,6 +281,7 @@
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
     "cab05318-91c7-4ddc-a57f-d1befd526698",
     "1682a4f4-55c7-4122-965c-6df4464d611c",
-    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1"
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1",
+    "f451f502-2c53-49a9-b6a6-d244b743c9d1"
   ]
 }
