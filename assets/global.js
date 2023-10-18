@@ -553,7 +553,7 @@ class DeferredMedia extends HTMLElement {
   }
 
   loadContent(focus = true) {
-    window.pauseAllMedia();
+    // window.pauseAllMedia();
     if (!this.getAttribute('loaded')) {
       const content = document.createElement('div');
       content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
