@@ -23,7 +23,12 @@
   <div class="video-wrapper">
     {% if section.settings.video %}
       <video autoplay muted loop playsinline>
-        <source src="{{ video_id | asset_url }}" type="video/mp4">
+        <source src="{{ video_id |  video_tag: 
+        image_size: "1100x",
+        loop: true,
+        controls: false,
+        muted: false
+        }}" type="video/mp4">
       </video>
     {% endif %}
   </div>
