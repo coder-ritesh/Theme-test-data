@@ -19,7 +19,7 @@
 <div class="video-section">
   <div class="video-wrapper">
     {% if section.settings.video %}
-      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: true }}"
+      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}"
     {% endif %}
   </div>
 </div>
