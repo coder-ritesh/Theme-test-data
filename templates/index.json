@@ -263,7 +263,7 @@
         "heading": "",
         "heading_size": "h0",
         "enable_video_autoplay": false,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "video": "shopify:\/\/files\/videos\/Sample-MP4-Video-File-Download (1).mp4",
         "video_url": "",
         "description": "",
