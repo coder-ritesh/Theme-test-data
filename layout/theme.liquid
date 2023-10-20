@@ -316,10 +316,10 @@
     <script>
       $(window).on('load',function(){
       	setTimeout(function(){
-        $('body').addClass('overFlow');  
+        $('body').removeClass('overFlow');  
       	$('.page-loader').fadeOut('slow');
       	},1500);
-        this.removeClass('overFlow');
+        this.addClass('overFlow');
       });
     </script>
   </body>
