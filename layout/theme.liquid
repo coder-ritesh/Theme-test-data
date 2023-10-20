@@ -315,11 +315,11 @@
     
     <script>
       $(window).on('load',function(){
+        $('body').removeClass('overFlow');
       	setTimeout(function(){
-        $('body').removeClass('overFlow');  
+        $('body').addClass('overFlow');  
       	$('.page-loader').fadeOut('slow');
       	},1500);
-        this.addClass('overFlow');
       });
     </script>
   </body>
