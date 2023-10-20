@@ -31,9 +31,6 @@ body{
 }
 
 .lo_circle{
-    position:absolute;
-    right: 0px;
-    left: 0px;
     border: 8px solid orange;
     border-radius: 50%;
     border-color: #ddd #ddd #ddd transparent;
