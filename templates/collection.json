@@ -25,10 +25,62 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "b4c8ab27-4239-46cd-80c3-783ce66e7300": {
+      "type": "double-slider",
+      "blocks": {
+        "a4a40a7d-64be-4adf-bca1-e6d0cf5177ea": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/kids-beanie.jpg"
+          }
+        },
+        "a157b1ce-6b5d-4aba-b2d1-8a71ea8759b2": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
+          }
+        },
+        "2fd20646-f8e3-4b83-b836-ffa2176bd921": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg"
+          }
+        },
+        "10e7de82-fd26-494e-aae2-8fd617078d51": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
+          }
+        },
+        "936a0f7b-4447-4197-8a33-d4b746b9adea": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg"
+          }
+        },
+        "1fc71621-0c8e-4fd0-b251-9b52ace8adc6": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/certification-design-template-2124bd028602e3b9f4b3e9eaa86f5574_screen.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "a4a40a7d-64be-4adf-bca1-e6d0cf5177ea",
+        "a157b1ce-6b5d-4aba-b2d1-8a71ea8759b2",
+        "2fd20646-f8e3-4b83-b836-ffa2176bd921",
+        "10e7de82-fd26-494e-aae2-8fd617078d51",
+        "936a0f7b-4447-4197-8a33-d4b746b9adea",
+        "1fc71621-0c8e-4fd0-b251-9b52ace8adc6"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "b4c8ab27-4239-46cd-80c3-783ce66e7300"
   ]
 }
