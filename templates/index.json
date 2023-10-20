@@ -311,6 +311,18 @@
           "settings": {
             "block-image": "shopify:\/\/shop_images\/kids-beanie.jpg"
           }
+        },
+        "526936bb-ea8a-476e-9420-481e91dad757": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/where-the-street-have-no-snow.jpg"
+          }
+        },
+        "0ae27309-7527-40c2-bda9-8cc4309982b0": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-dusted-wreath-on-white.jpg"
+          }
         }
       },
       "block_order": [
@@ -320,10 +332,13 @@
         "edb79142-125f-4184-881d-54849c33322d",
         "c50a2323-3e18-4d69-938a-2cd2cf86b689",
         "36cb8f87-f554-4ed0-a65a-63c8133da2ec",
-        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc"
+        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc",
+        "526936bb-ea8a-476e-9420-481e91dad757",
+        "0ae27309-7527-40c2-bda9-8cc4309982b0"
       ],
       "settings": {
         "swipe_on_mobile": true,
+        "columns_desktop": 3,
         "padding_top": 36,
         "padding_bottom": 36
       }
