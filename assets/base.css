@@ -6,7 +6,7 @@
 	position: absolute;
 	background: #272727;
 	z-index: 1000;
-    overflow:hidden,
+    overflow:hidden;
 	.txt{
 		color: #666;
 		text-align: center;
