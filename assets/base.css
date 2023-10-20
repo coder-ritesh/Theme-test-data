@@ -31,8 +31,9 @@ body{
 }
 
 .lo_circle{
-    align-items:center;
     top:40%;
+    right:50%;
+    left:50%;
     position:relative;
     border: 8px solid orange;
     border-radius: 50%;
