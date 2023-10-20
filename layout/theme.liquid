@@ -314,13 +314,15 @@
     </div>
     
     <script>
-      $(window).on('load',function(){
-       $('body').addClass('overFlow'); 
-      	setTimeout(function(){
-        $('body').removeClass('overFlow');
-      	$('.page-loader').fadeOut('slow');
-      	},1500);
-      });
+     $(window).on('load', function () {
+    $('body').addClass('overflow');
+    
+    setTimeout(function () {
+        $('body').removeClass('overflow');
+        $('.page-loader').fadeOut('slow');
+    }, 1500);
+});
+
     </script>
   </body>
 </html>
