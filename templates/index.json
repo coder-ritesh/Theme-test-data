@@ -217,17 +217,10 @@
           "settings": {
             "collection": "hydrogen"
           }
-        },
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "automated-collection"
-          }
         }
       },
       "block_order": [
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0",
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1"
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0"
       ],
       "settings": {
         "title": "<strong>Collections<\/strong>",
@@ -282,52 +275,6 @@
         "enable_quick_add": false
       }
     },
-    "1682a4f4-55c7-4122-965c-6df4464d611c": {
-      "type": "image-gallery",
-      "blocks": {
-        "b031c56e-863e-4761-a986-20e6f432d1ca": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg"
-          }
-        },
-        "be2df1dc-9b72-4a16-b43b-afd55110286e": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg"
-          }
-        },
-        "df029cd0-4792-448f-8499-3ab625787d80": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
-          }
-        },
-        "054f8829-6763-49a1-848d-dc5fe2034df9": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg"
-          }
-        },
-        "8c0f7848-609b-4b01-af69-4cb22065b4ba": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/theme_cover_image.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "b031c56e-863e-4761-a986-20e6f432d1ca",
-        "be2df1dc-9b72-4a16-b43b-afd55110286e",
-        "df029cd0-4792-448f-8499-3ab625787d80",
-        "054f8829-6763-49a1-848d-dc5fe2034df9",
-        "8c0f7848-609b-4b01-af69-4cb22065b4ba"
-      ],
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1": {
       "type": "video",
       "settings": {
@@ -352,7 +299,6 @@
     "f1552b18-6017-4231-810d-74e61da22c37",
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
     "cab05318-91c7-4ddc-a57f-d1befd526698",
-    "1682a4f4-55c7-4122-965c-6df4464d611c",
     "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1"
   ]
 }
