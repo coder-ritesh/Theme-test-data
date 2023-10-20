@@ -315,9 +315,11 @@
     
     <script>
       $(window).on('load',function(){
-      	setTimeout(function(){ 
+      	setTimeout(function(){
+        $('body').addClass('overFlow');  
       	$('.page-loader').fadeOut('slow');
       	},1500);
+        this.removeClass('overFlow');
       });
     </script>
   </body>
