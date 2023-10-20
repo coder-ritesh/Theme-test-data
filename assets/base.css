@@ -33,6 +33,7 @@ body{
 .lo_circle{
     text-align:center;
     top:40%;
+    position:relative;
     border: 8px solid orange;
     border-radius: 50%;
     border-color: #ddd #ddd #ddd transparent;
