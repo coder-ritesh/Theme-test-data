@@ -25,7 +25,7 @@
 <div class="main-div">
   <div class="page-width section-{{ section.id }}-padding">
      <div class="main-inner">
-        <slider-component class="slider-mobile-gutter">
+        <slider-component class="slider-mobile-gutter zoom-gallery">
             <ul
               class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
               id="Slider-{{ section.id }}"
@@ -45,7 +45,8 @@
                 >
                   <div class="slider-image-{{ forloop.index }}">
                      {% if block.settings.block-image %}
-                     <img src="{{ block.settings.block-image |  image_url: width: 240  }}" alt="{{ block.settings.block-image.alt }}" loading="lazy"/>
+                        <a href="{{ block.settings.block-image |  image_url: width:1024 }}" title="{{ block.settings.block-image.alt }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
+                     <img src="{{ block.settings.block-image |  image_url: width: 240  }}" alt="{{ block.settings.block-image.alt }}" loading="lazy"/></a>
                   {% endif %}
                   </div>
                 </li>
@@ -81,6 +82,35 @@
      </div>
   </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+	$('.zoom-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+});
+</script>
 
 {% schema %}
 {
