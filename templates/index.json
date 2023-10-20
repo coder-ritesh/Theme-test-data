@@ -323,7 +323,7 @@
         "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc"
       ],
       "settings": {
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
