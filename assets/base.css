@@ -28,7 +28,9 @@ body{
 		line-height: 1.5;
 	}
 }
-
+.overFlow{
+  overflow-y:hidden;
+}
 .lo_circle{
     top:40%;
     right:50%;
