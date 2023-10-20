@@ -256,14 +256,17 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a>
     
-    <div class="page-loader">
+    <!-- <div class="page-loader">
       <div class="spinner"></div>
       <div class="txt">Cargando<br>vacaciones</div>
-    </div>
+    </div> -->
+    <div class="loader"></div>
+
+    
     <script>
       $(window).on('load',function(){
-      	setTimeout(function(){ // allowing 3 secs to fade out loader
-      	$('.page-loader').fadeOut('slow');
+      	setTimeout(function(){ 
+      	$('.loader').fadeOut('slow');
       	},3000);
       });
     </script>
