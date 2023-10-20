@@ -315,9 +315,9 @@
     
     <script>
       $(window).on('load',function(){
-        $('body').removeClass('overFlow');
+       $('body').addClass('overFlow'); 
       	setTimeout(function(){
-        $('body').addClass('overFlow');  
+           $('body').removeClass('overFlow');
       	$('.page-loader').fadeOut('slow');
       	},1500);
       });
