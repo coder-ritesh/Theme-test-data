@@ -314,9 +314,10 @@
     </div>
     
     <script>
+      $(window).on('load',function(){
+         $('body').addClass('overflow');
+      })
      $(window).on('load', function () {
-    $('body').addClass('overflow');
-    
     setTimeout(function () {
         $('body').removeClass('overflow');
         $('.page-loader').fadeOut('slow');
