@@ -1,4 +1,68 @@
 /* Color custom properties */
+body{
+  padding: 0;
+	margin: 0;
+	position: relative;
+	background: url("https://images.unsplash.com/photo-1569973560851-8c4563f4c3c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+		no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	font-family: "Raleway", sans-serif;
+}
+
+.page-loader{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #272727;
+	z-index: 1000;
+    overflow:hidden;
+	.txt{
+		color: #666;
+		text-align: center;
+		top: 40%;
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: bold;
+		line-height: 1.5;
+	}
+}
+.overflow{
+  overflow-y:hidden;
+}
+.lo_circle{
+    top:40%;
+    right:50%;
+    left:50%;
+    position:relative;
+    border: 8px solid orange;
+    border-radius: 50%;
+    border-color: #ddd #ddd #ddd transparent;
+    width: 80px;
+    height: 80px;
+    animation: spinning 1s linear infinite;
+    margin-bottom: 30px;
+}
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* SPINNER ANIMATION */
+.spinner {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
 
 :root,
 .color-background-1 {

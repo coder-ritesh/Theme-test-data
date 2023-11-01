@@ -88,6 +88,82 @@
         "padding_bottom": 36
       }
     },
+    "1e6fc4e2-9773-49d3-ab97-98904296aeb3": {
+      "type": "double-slider",
+      "blocks": {
+        "aa61f6d1-2d25-4d39-85af-c949bf47e339": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/ValerianDucourtil_Mayrhofen_2Z7A2508_MattGEORGES-featured.jpg"
+          }
+        },
+        "4bac3a28-0569-41ad-8140-280fbf766aef": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snowboard_sky.png"
+          }
+        },
+        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
+          }
+        },
+        "edb79142-125f-4184-881d-54849c33322d": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/Main_52f8e304-92d9-4a36-82af-50df8fe31c69.jpg"
+          }
+        },
+        "c50a2323-3e18-4d69-938a-2cd2cf86b689": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-covered-black-rocked-peaks.jpg"
+          }
+        },
+        "36cb8f87-f554-4ed0-a65a-63c8133da2ec": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-boarder-on-snowy-mountain.jpg"
+          }
+        },
+        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/kids-beanie.jpg"
+          }
+        },
+        "526936bb-ea8a-476e-9420-481e91dad757": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/where-the-street-have-no-snow.jpg"
+          }
+        },
+        "0ae27309-7527-40c2-bda9-8cc4309982b0": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-dusted-wreath-on-white.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "aa61f6d1-2d25-4d39-85af-c949bf47e339",
+        "4bac3a28-0569-41ad-8140-280fbf766aef",
+        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2",
+        "edb79142-125f-4184-881d-54849c33322d",
+        "c50a2323-3e18-4d69-938a-2cd2cf86b689",
+        "36cb8f87-f554-4ed0-a65a-63c8133da2ec",
+        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc",
+        "526936bb-ea8a-476e-9420-481e91dad757",
+        "0ae27309-7527-40c2-bda9-8cc4309982b0"
+      ],
+      "settings": {
+        "swipe_on_mobile": true,
+        "columns_desktop": 3,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "f1552b18-6017-4231-810d-74e61da22c37": {
       "type": "image-with-text",
       "blocks": {
@@ -141,17 +217,10 @@
           "settings": {
             "collection": "hydrogen"
           }
-        },
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "automated-collection"
-          }
         }
       },
       "block_order": [
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0",
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1"
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0"
       ],
       "settings": {
         "title": "<strong>Collections<\/strong>",
@@ -206,52 +275,6 @@
         "enable_quick_add": false
       }
     },
-    "1682a4f4-55c7-4122-965c-6df4464d611c": {
-      "type": "image-gallery",
-      "blocks": {
-        "b031c56e-863e-4761-a986-20e6f432d1ca": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg"
-          }
-        },
-        "be2df1dc-9b72-4a16-b43b-afd55110286e": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg"
-          }
-        },
-        "df029cd0-4792-448f-8499-3ab625787d80": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
-          }
-        },
-        "054f8829-6763-49a1-848d-dc5fe2034df9": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg"
-          }
-        },
-        "8c0f7848-609b-4b01-af69-4cb22065b4ba": {
-          "type": "image_picker",
-          "settings": {
-            "image-gallery": "shopify:\/\/shop_images\/theme_cover_image.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "b031c56e-863e-4761-a986-20e6f432d1ca",
-        "be2df1dc-9b72-4a16-b43b-afd55110286e",
-        "df029cd0-4792-448f-8499-3ab625787d80",
-        "054f8829-6763-49a1-848d-dc5fe2034df9",
-        "8c0f7848-609b-4b01-af69-4cb22065b4ba"
-      ],
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1": {
       "type": "video",
       "settings": {
@@ -266,78 +289,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1e6fc4e2-9773-49d3-ab97-98904296aeb3": {
-      "type": "double-slider",
-      "blocks": {
-        "aa61f6d1-2d25-4d39-85af-c949bf47e339": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/ValerianDucourtil_Mayrhofen_2Z7A2508_MattGEORGES-featured.jpg"
-          }
-        },
-        "4bac3a28-0569-41ad-8140-280fbf766aef": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/snowboard_sky.png"
-          }
-        },
-        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
-          }
-        },
-        "edb79142-125f-4184-881d-54849c33322d": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/Main_52f8e304-92d9-4a36-82af-50df8fe31c69.jpg"
-          }
-        },
-        "c50a2323-3e18-4d69-938a-2cd2cf86b689": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/snow-covered-black-rocked-peaks.jpg"
-          }
-        },
-        "36cb8f87-f554-4ed0-a65a-63c8133da2ec": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/snow-boarder-on-snowy-mountain.jpg"
-          }
-        },
-        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc": {
-          "type": "image_picker",
-          "settings": {
-            "block-image": "shopify:\/\/shop_images\/kids-beanie.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "aa61f6d1-2d25-4d39-85af-c949bf47e339",
-        "4bac3a28-0569-41ad-8140-280fbf766aef",
-        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2",
-        "edb79142-125f-4184-881d-54849c33322d",
-        "c50a2323-3e18-4d69-938a-2cd2cf86b689",
-        "36cb8f87-f554-4ed0-a65a-63c8133da2ec",
-        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc"
-      ],
-      "settings": {
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "ef395380-8139-4c68-a3bd-84314be5d074",
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
     "featured_collection",
+    "1e6fc4e2-9773-49d3-ab97-98904296aeb3",
     "f1552b18-6017-4231-810d-74e61da22c37",
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
     "cab05318-91c7-4ddc-a57f-d1befd526698",
-    "1682a4f4-55c7-4122-965c-6df4464d611c",
-    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1",
-    "1e6fc4e2-9773-49d3-ab97-98904296aeb3"
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1"
   ]
 }

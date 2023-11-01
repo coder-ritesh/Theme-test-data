@@ -1,6 +1,26 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
+<style>
+ .collection-list .slider-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+   .collection-list .slider-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+  
+  
+}
+  
+</style>
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -21,6 +41,7 @@
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
     assign show_mobile_slider = true
   endif
+  
 -%}
 
 <div class="main-div">
@@ -47,7 +68,7 @@
                   <div class="slider-image">
                      {% if block.settings.block-image %}
                         <a href="{{ block.settings.block-image |  image_url: width:1024 }}" title="{{ block.settings.block-image.alt }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
-                     <img src="{{ block.settings.block-image |  image_url: width:1024  }}" alt="{{ block.settings.block-image.alt }}" loading="lazy"/></a>
+                          <img src="{{ block.settings.block-image |  image_url: width:1024  }}" alt="{{ block.settings.block-image.alt }}" loading="lazy"/></a>
                   {% endif %}
                   </div>
                 </li>
