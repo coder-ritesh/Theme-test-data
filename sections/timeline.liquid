@@ -16,6 +16,10 @@
 
 
 <style>
+
+  $color-grey: #bdc3c7;
+$color-green: #2ecc71;
+  
   /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -108,6 +112,82 @@
   position: relative;
   border-radius: 6px;
 }
+
+
+
+
+
+  .timelines {
+  padding: 50px;
+  ul {
+    padding: 0;
+  }
+
+  .default-line {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: $color-grey;
+    height: 1500px;
+  }
+
+  .draw-line {
+    width: 4px;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    background: $color-green;
+  }
+
+  ul li {
+    list-style-type: none;
+    position: relative;
+    width: 2px;
+    margin: 0 auto;
+    height: 400px;
+    background: transparent;
+
+    &.in-view {
+      // background-color: $color-red;
+      @include global-transition;
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-image: url('https://sg0duxoli5-flywheel.netdna-ssl.com/wp-content/themes/inspired_elearning_theme/images/check-dark.svg');
+        background-color: $color-green;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include global-transition;
+
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: inherit;
+      background: $color-grey;
+      transition: all .4s ease-in-out;
+    }
+
+  }
+}
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -142,9 +222,92 @@
                 
               {% endfor %}
     </div>
+
+
+
+
+   <div class="timelines">
+  <ul>
+    <span class="default-line"></span>
+    <span class="draw-line"></span>
+    {% for block in section.blocks %}
+     <li>
+      <div class="container left">
+                      <div class="content">
+                        <h2 class="content-title">
+                          {{ block.settings.leftTitle }}
+                        </h2>
+                        <p class="content-para">
+                          {{ block.settings.leftContent }}
+                        </p>
+                      </div>
+                    </div>
+                
+                    <div class="container right">
+                      <div class="content">
+                        <h2 class="content-title">
+                          {{ block.settings.rightTitle }}
+                        </h2>
+                        <p class="content-para">
+                          {{ block.settings.rightContent }}
+                        </p>
+                      </div>
+                    </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+    
+    
     
   </div>
 </div>
+
+
+
+<script>
+  var items = $(".timelines li"),
+timelineHeight = $(".timelines ul").height(),
+greyLine = $('.default-line'),
+lineToDraw = $('.draw-line');
+
+if(lineToDraw.length) {
+  $(window).on('scroll', function () {
+
+    var redLineHeight = lineToDraw.height(),
+    greyLineHeight = greyLine.height(),
+    windowDistance = $(window).scrollTop(),
+    windowHeight = $(window).height() / 2,
+    timelineDistance = $(".timelines").offset().top;
+
+    if(windowDistance >= timelineDistance - windowHeight) {
+      line = windowDistance - timelineDistance + windowHeight;
+
+      if(line <= greyLineHeight) {
+        lineToDraw.css({
+          'height' : line + 20 + 'px'
+        });
+      }
+    }
+
+    var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
+    items.each(function(index){
+      var circlePosition = $(this).offset();
+
+      if(bottom > circlePosition.top) {				
+        $(this).addClass('in-view');
+      } else {
+        $(this).removeClass('in-view');
+      }
+    });	
+  });
+}
+</script>
+
+
+
 
 
 {% schema %}
