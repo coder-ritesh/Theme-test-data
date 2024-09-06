@@ -29,11 +29,35 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: white;
+  background-color: #FF9F55; /* Scroll color before filling */
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  z-index: 1;
+}
+
+.default-line {
+  position: absolute;
+  width: 6px;
+  background-color: #e9ecef; /* Default grey line before scroll */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0;
+}
+
+.draw-line {
+  position: absolute;
+  width: 6px;
+  background-color: #FF9F55; /* Active fill color */
+  top: 0;
+  height: 0; /* Will change height based on scroll */
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  transition: height 0.4s ease; /* Smooth transition for line fill */
 }
 
 /* Container around content */
@@ -58,15 +82,15 @@
   border: 4px solid #FF9F55;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
-  transition: width 0.6s ease, height 0.6s ease; /* Add transition for circle */
+  z-index: 2;
+  transition: width 0.6s ease, height 0.6s ease;
 }
 
-/* Add scale effect when the container is visible */
+/* Growing circle when container is in view */
 .show .container::after {
-  width: 35px;  /* Growing circle */
+  width: 35px;
   height: 35px;
-  right: -22px; /* Adjusting positioning when circle grows */
+  right: -22px;
 }
 
 /* Left containers */
@@ -151,8 +175,6 @@
     left: 0;
   }
 }
-
-
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -194,6 +216,9 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const timeline = document.querySelector('.timeline');
+  const drawLine = document.querySelector('.draw-line');
+  
   // Function to detect if an element is in the viewport
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -208,7 +233,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to check the visibility of timeline items on scroll
   function checkScroll() {
     const timelineItems = document.querySelectorAll('.container');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const timelineHeight = timeline.offsetHeight;
     
+    // Calculate the fill height of the draw-line as per the scroll
+    const timelineTop = timeline.offsetTop;
+    const lineHeight = (scrollTop - timelineTop) / timelineHeight * 100;
+    const filledHeight = Math.min(Math.max(lineHeight, 0), 100);
+    
+    drawLine.style.height = `${filledHeight}%`;
+    
+    // Animate the dots and content
     timelineItems.forEach(item => {
       if (isInViewport(item)) {
         item.classList.add('show');
@@ -222,7 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial check on load
   checkScroll();
 });
-
 
 </script>
 
