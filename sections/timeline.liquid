@@ -17,98 +17,52 @@
 
 <style>
 
-  /* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-  
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
+/* Add animation on scroll */
 .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+/* When the container is in view */
+.container.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Place the container to the left */
-.left {
-  left: 0;
+/* Ensuring timeline container is scrollable */
+.timeline {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh; /* Controls vertical height for scrolling */
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
+.gradient {
+  background: linear-gradient(180deg, #ff9f55, #ffffff);
 }
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+/* Optional tweaks for responsive design */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+  
+  .container::after {
+    left: 15px;
+  }
+  
+  .left::before,
+  .right::before {
+    display: none;
+  }
 }
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
 
 </style>
 
@@ -149,7 +103,38 @@
 </div>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Function to detect when an element is in viewport
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
+  // Function to add "show" class to containers when in view
+  function checkTimelineScroll() {
+    const containers = document.querySelectorAll('.container');
+    
+    containers.forEach(container => {
+      if (isInViewport(container)) {
+        container.classList.add('show');
+      }
+    });
+  }
+
+  // Check on scroll
+  window.addEventListener('scroll', checkTimelineScroll);
+  
+  // Initial check in case elements are in view on load
+  checkTimelineScroll();
+});
+
+</script>
 
 
 
