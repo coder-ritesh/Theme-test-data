@@ -183,35 +183,29 @@
     <div class="timeline">
       <span class="default-line"></span>
       <span class="draw-line"></span>
-              {% for block in section.blocks %}
-               
-                    <div class="container left">
-                      <div class="content">
-                        <h2 class="content-title">
-                          {{ block.settings.leftTitle }}
-                        </h2>
-                        <p class="content-para">
-                          {{ block.settings.leftContent }}
-                        </p>
-                      </div>
-                    </div>
-                
-                    <div class="container right">
-                      <div class="content">
-                        <h2 class="content-title">
-                          {{ block.settings.rightTitle }}
-                        </h2>
-                        <p class="content-para">
-                          {{ block.settings.rightContent }}
-                        </p>
-                      </div>
-                    </div>
-                
-              {% endfor %}
-    </div>  
+              
+      {% for block in section.blocks %}
+        <!-- Left Timeline Block -->
+        <div class="container left">
+          <div class="content">
+            <h2 class="content-title">{{ block.settings.leftTitle }}</h2>
+            <p class="content-para">{{ block.settings.leftContent }}</p>
+          </div>
+        </div>
+        
+        <!-- Right Timeline Block -->
+        <div class="container right">
+          <div class="content">
+            <h2 class="content-title">{{ block.settings.rightTitle }}</h2>
+            <p class="content-para">{{ block.settings.rightContent }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
     
   </div>
 </div>
+
 
 
 <script>
