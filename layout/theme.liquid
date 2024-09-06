@@ -308,22 +308,6 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <div class="page-loader">
-      <div class="lo_circle">.</div>
-      <!-- <div class="txt">loading...</div> -->
-    </div>
     
-    <script>
-      $(window).on('load',function(){
-         $('body').addClass('overflow');
-      })
-     $(window).on('load', function () {
-      setTimeout(function () {
-          $('body').removeClass('overflow');
-          $('.page-loader').fadeOut('slow');
-      }, 1000);
-});
-
-    </script>
   </body>
 </html>
