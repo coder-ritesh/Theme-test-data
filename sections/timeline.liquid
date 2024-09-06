@@ -59,6 +59,14 @@
   top: 15px;
   border-radius: 50%;
   z-index: 1;
+  transition: width 0.6s ease, height 0.6s ease; /* Add transition for circle */
+}
+
+/* Add scale effect when the container is visible */
+.show .container::after {
+  width: 35px;  /* Growing circle */
+  height: 35px;
+  right: -22px; /* Adjusting positioning when circle grows */
 }
 
 /* Left containers */
@@ -144,6 +152,7 @@
   }
 }
 
+
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -213,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial check on load
   checkScroll();
 });
+
 
 </script>
 
