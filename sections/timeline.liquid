@@ -107,47 +107,10 @@
   position: relative;
   border-radius: 6px;
 }
-
-
-  #box {
-  height: 300px;
-  overflow-y: scroll;
-  scroll-timeline: --squareTimeline y;
-  /* Firefox supports the older "vertical" syntax */
-  scroll-timeline: --squareTimeline vertical;
-  position: relative;
-}
-
-#square {
-  background-color: deeppink;
-  width: 100px;
-  height: 100px;
-  animation-name: rotateAnimation;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timeline: --squareTimeline;
-  position: absolute;
-  bottom: 0;
-}
-
-#stretcher {
-  height: 600px;
-  background: #dedede;
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-  
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div id="box" class="page-width section-{{ section.id }}-padding">
+  <div class="page-width section-{{ section.id }}-padding">
     <div class="timeline">
       {% for block in section.blocks %}
         <div class="container left">
@@ -172,8 +135,6 @@
         </div>
       {% endfor %}
     </div>
-    <div id="square"></div>
-  <div id="stretcher"></div>
   </div>
 </div>
 
