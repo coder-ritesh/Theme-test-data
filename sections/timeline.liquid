@@ -111,8 +111,9 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding">
+    
     <div class="timeline">
-      {% for block in section.blocks %}
+      {% for block in section.blocks %}  
         <div class="container left">
           <div class="content">
             <h2 class="content-title">
@@ -123,6 +124,7 @@
             </p>
           </div>
         </div>
+        
         <div class="container right">
           <div class="content">
             <h2 class="content-title">
@@ -135,6 +137,7 @@
         </div>
       {% endfor %}
     </div>
+    
   </div>
 </div>
 
