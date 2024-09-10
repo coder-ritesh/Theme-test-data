@@ -16,33 +16,33 @@
 
 
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
-
-    <div class="timeline">
-  <ul>
-    <span class="default-line"></span>
-    <span class="draw-line"></span>
-    {% for block in section.blocks %}
-      <li>
-        <div>
-          <h4>{{ block.settings.leftTitle }}</h4>
-                  <h2>{{ block.settings.leftSubTitle }}</h2>
-                  <p>{{ block.settings.leftContent }}</p>
-        </div> 
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-
-
-
-
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+      <div class="page-width section-{{ section.id }}-padding">
     
+          <div class="timeline">
+              <ul>
+                <span class="default-line"></span>
+                <span class="draw-line"></span>
+                {% for block in section.blocks %}
+                  <li>
+                    <div>
+                      {% if block.settings.leftTitle != 'blank' %}
+                         <h4>{{ block.settings.leftTitle }}</h4>
+                      {% endif %}
+                      {% if block.settings.leftSubTitle != 'blank' %}
+                         <h2>{{ block.settings.leftSubTitle }}</h2>
+                      {% endif %}
+                      {% if block.settings.leftContent != 'blank' %}
+                         <p>{{ block.settings.leftContent }}</p>
+                      {% endif %}
+                    </div> 
+                  </li>
+                {% endfor %}
+              </ul>
+          </div>
     
+      </div>
   </div>
-</div>
 
 
 <script>
