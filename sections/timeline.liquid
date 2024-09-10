@@ -27,17 +27,25 @@
         <!-- Left Timeline Block -->
         <div class="container left">
           <div class="content">
+            {% if block.settings.leftTitle != 'blank' %}
             <h2 class="content-title">{{ block.settings.leftTitle }}</h2>
-            <p class="content-para">{{ block.settings.leftContent }}</p>
+            {% endif %}
+            {% if block.settings.leftContent != 'blank'%}
+              <p class="content-para">{{ block.settings.leftContent }}</p>
+            {% endif %}
           </div>
         </div>
         
         <!-- Right Timeline Block -->
         <div class="container right">
           <div class="content">
+            {% if block.settings.rightTitle != 'blank' %}
             <h2 class="content-title">{{ block.settings.rightTitle }}</h2>
-            <p class="content-para">{{ block.settings.rightContent }}</p>
-          </div>
+            {% endif %}
+            {% if block.settings.rightContent != 'blank'%}
+              <p class="content-para">{{ block.settings.rightContent }}</p>
+            {% endif %}
+            </div>
         </div>
       {% endfor %}
     </div>
