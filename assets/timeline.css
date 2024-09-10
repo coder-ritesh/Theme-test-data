@@ -19,11 +19,11 @@
   background: green;
 }
 
-ul {
+.timelines ul {
   padding: 0;
 }
 
-ul li {
+.timelines ul li {
   list-style-type: none;
   position: relative;
   width: 2px;
