@@ -27,7 +27,7 @@
               <div class="bead"></div>
               <div class="content">
                 <h4>{{ block.settings.leftTitle }}</h4>
-                <h2>Freelance Designer</h2>
+                <h2>{{ block.settings.leftSubTitle }}</h2>
                 <p>{{ block.settings.leftContent }}</p>
               </div>
             </div>
@@ -159,7 +159,7 @@ window.addEventListener("scroll", scrollHandler);
       "settings":[
         {
           "type":"header",
-          "content":"Left Content"
+          "content":"Content"
         },
         {
           "type":"text",
@@ -168,21 +168,12 @@ window.addEventListener("scroll", scrollHandler);
         },
         {
           "type":"text",
+          "id":"leftSubTitle",
+          "label":"Sub Title"
+        },
+        {
+          "type":"text",
           "id":"leftContent",
-          "label":"Content"
-        },
-        {
-          "type":"header",
-          "content":"Right Content"
-        },
-        {
-          "type":"text",
-          "id":"rightTitle",
-          "label":"Title"
-        },
-        {
-          "type":"text",
-          "id":"rightContent",
           "label":"Content"
         }
       ]
