@@ -32,7 +32,7 @@
   background: transparent;
 }
 
-.in-view {
+.timelines.in-view {
   // background-color: $color-red;
   @include global-transition;
 
@@ -53,7 +53,7 @@
     @include global-transition;
   }
 }
-&::before {
+.timelines &::before {
   content: "";
   position: absolute;
   left: 50%;
