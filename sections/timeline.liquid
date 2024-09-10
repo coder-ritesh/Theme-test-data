@@ -17,88 +17,79 @@
 
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
+  <div class="page-width section-{{ section.id }}-padding container">
     
     <div class="timeline">
-      <span class="default-line"></span>
-      <span class="draw-line"></span>
-              
-      {% for block in section.blocks %}
-        <!-- Left Timeline Block -->
-        <div class="container left">
-          <div class="content">
-            {% if block.settings.leftTitle != 'blank' %}
-            <h2 class="content-title">{{ block.settings.leftTitle }}</h2>
-            {% endif %}
-            {% if block.settings.leftContent != 'blank'%}
-              <p class="content-para">{{ block.settings.leftContent }}</p>
-            {% endif %}
-          </div>
-        </div>
-        
-        <!-- Right Timeline Block -->
-        <div class="container right">
-          <div class="content">
-            {% if block.settings.rightTitle != 'blank' %}
-            <h2 class="content-title">{{ block.settings.rightTitle }}</h2>
-            {% endif %}
-            {% if block.settings.rightContent != 'blank'%}
-              <p class="content-para">{{ block.settings.rightContent }}</p>
-            {% endif %}
+      <div class="line"></div>
+     
+        {% for block in section.blocks %}
+            <div class="section">
+              <div class="bead"></div>
+              <div class="content">
+                <h4>{{ block.settings.leftTitle }}</h4>
+                <h2>Freelance Designer</h2>
+                <p>{{ block.settings.leftContent }}</p>
+              </div>
             </div>
-        </div>
-      {% endfor %}
+          {% endfor %}
+
     </div>
     
   </div>
 </div>
 
-
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const timeline = document.querySelector('.timeline');
-  const drawLine = document.querySelector('.draw-line');
-  
-  // Function to detect if an element is in the viewport
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+function qs(selector, all = false) {
+  return all
+    ? document.querySelectorAll(selector)
+    : document.querySelector(selector);
+}
+
+const sections = qs(".section", true);
+const timeline = qs(".timeline");
+const line = qs(".line");
+line.style.bottom = `calc(100% - 20px)`;
+let prevScrollY = window.scrollY;
+let up, down;
+let full = false;
+let set = 0;
+const targetY = window.innerHeight * 0.8;
+
+function scrollHandler(e) {
+  const { scrollY } = window;
+  up = scrollY < prevScrollY;
+  down = !up;
+  const timelineRect = timeline.getBoundingClientRect();
+  const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
+
+  const dist = targetY - timelineRect.top;
+  console.log(dist);
+
+  if (down && !full) {
+    set = Math.max(set, dist);
+    line.style.bottom = `calc(100% - ${set}px)`;
   }
 
-  // Function to check the visibility of timeline items on scroll
-  function checkScroll() {
-    const timelineItems = document.querySelectorAll('.container');
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const timelineHeight = timeline.offsetHeight;
-    
-    // Calculate the fill height of the draw-line as per the scroll
-    const timelineTop = timeline.offsetTop;
-    const lineHeight = (scrollTop - timelineTop) / timelineHeight * 100;
-    const filledHeight = Math.min(Math.max(lineHeight, 0), 100);
-    
-    drawLine.style.height = `${filledHeight}%`;
-    
-    // Animate the dots and content
-    timelineItems.forEach(item => {
-      if (isInViewport(item)) {
-        item.classList.add('show');
-      }
-    });
+  if (dist > timeline.offsetHeight + 50 && !full) {
+    full = true;
+    line.style.bottom = `-50px`;
   }
 
-  // Check timeline on scroll
-  window.addEventListener('scroll', checkScroll);
+  sections.forEach((item) => {
+    // console.log(item);
+    const rect = item.getBoundingClientRect(); //     console.log(rect);
 
-  // Initial check on load
-  checkScroll();
-});
+    if (rect.top + item.offsetHeight / 5 < targetY) {
+      item.classList.add("show-me");
+    }
+  }); // console.log(up, down);
 
+  prevScrollY = window.scrollY;
+}
+
+scrollHandler();
+line.style.display = "block";
+window.addEventListener("scroll", scrollHandler);
 </script>
 
 
