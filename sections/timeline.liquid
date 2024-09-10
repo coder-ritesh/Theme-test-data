@@ -20,7 +20,7 @@
       <div class="page-width section-{{ section.id }}-padding">
     
           <div class="timeline">
-              <ul class="timeUl">
+              <ul>
                 <span class="default-line"></span>
                 <span class="draw-line"></span>
                 {% for block in section.blocks %}
@@ -47,7 +47,7 @@
 
 <script>
 var items = $(".timeline li"),
-timelineHeight = $(".timeline .timeUl").height(),
+timelineHeight = $(".timeline ul").height(),
 greyLine = $('.default-line'),
 lineToDraw = $('.draw-line');
 
