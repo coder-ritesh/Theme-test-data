@@ -1,24 +1,7 @@
-timelines.timeline {
+.timelines.timeline {
   padding: 50px;
   ul {
     padding: 0;
-  }
-
-  .default-line {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    background: $color-grey;
-    height: 1500px;
-  }
-
-  .draw-line {
-    width: 4px;
-    height: 0;
-    position: absolute;
-    left: 50%;
-    background: $color-green;
   }
 
   ul li {
@@ -65,4 +48,21 @@ timelines.timeline {
       transition: all 0.4s ease-in-out;
     }
   }
+}
+
+.default-line {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: $color-grey;
+  height: 1500px;
+}
+
+.draw-line {
+  width: 4px;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  background: $color-green;
 }
