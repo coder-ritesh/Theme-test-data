@@ -55,7 +55,7 @@
   position: absolute;
   left: 50%;
   width: 4px;
-  background: $color-grey;
+  background: grey;
   height: 1500px;
 }
 
@@ -64,5 +64,5 @@
   height: 0;
   position: absolute;
   left: 50%;
-  background: $color-green;
+  background: green;
 }
