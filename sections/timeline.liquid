@@ -20,22 +20,23 @@
   <div class="page-width section-{{ section.id }}-padding">
     
     <div class="container">
-    <div class="timeline">
-      <div class="line"></div>
-     
-        {% for block in section.blocks %}
-            <div class="section">
-              <div class="bead"></div>
-              <div class="content">
-                <h4>{{ block.settings.leftTitle }}</h4>
-                <h2>{{ block.settings.leftSubTitle }}</h2>
-                <p>{{ block.settings.leftContent }}</p>
+      <div class="timeline">
+        <div class="line"></div>
+       
+           {% for block in section.blocks %}
+              <div class="section">
+                <div class="bead"></div>
+                <div class="content">
+                  <h4>{{ block.settings.leftTitle }}</h4>
+                  <h2>{{ block.settings.leftSubTitle }}</h2>
+                  <p>{{ block.settings.leftContent }}</p>
+                </div>
               </div>
-            </div>
-          {% endfor %}
-
+            {% endfor %}
+  
+      </div>
     </div>
-    </div>
+    
   </div>
 </div>
 
