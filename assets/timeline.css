@@ -32,7 +32,7 @@
   background: transparent;
 }
 
-.timelines.in-view {
+.in-view {
   // background-color: $color-red;
   @include global-transition;
 
