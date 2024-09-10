@@ -1,17 +1,5 @@
 .timelines.timeline {
   padding: 50px;
-  ul {
-    padding: 0;
-  }
-
-  ul li {
-    list-style-type: none;
-    position: relative;
-    width: 2px;
-    margin: 0 auto;
-    height: 400px;
-    background: transparent;
-  }
 }
 
 .default-line {
@@ -29,6 +17,19 @@
   position: absolute;
   left: 50%;
   background: green;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  margin: 0 auto;
+  height: 400px;
+  background: transparent;
 }
 
 .in-view {
