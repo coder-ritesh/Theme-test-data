@@ -17,30 +17,75 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding">
-    
-    <div class="container">
-      <div class="timeline">
-        <div class="line">.</div>
-       
-           {% for block in section.blocks %}
-              <div class="section">
-                <div class="bead"></div>
-                <div class="content">
-                  <h4>{{ block.settings.leftTitle }}</h4>
+
+    <div class="timeline">
+  <ul>
+    <span class="default-line"></span>
+    <span class="draw-line"></span>
+    {% for block in section.blocks %}
+      <li>
+        <div>
+          <h4>{{ block.settings.leftTitle }}</h4>
                   <h2>{{ block.settings.leftSubTitle }}</h2>
                   <p>{{ block.settings.leftContent }}</p>
-                </div>
-              </div>
-            {% endfor %}
-  
-      </div>
-    </div>
+        </div> 
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+
+
+
+    
     
   </div>
 </div>
 
 
+<script>
+var items = $(".timeline li"),
+timelineHeight = $(".timeline ul").height(),
+greyLine = $('.default-line'),
+lineToDraw = $('.draw-line');
 
+  
+if(lineToDraw.length) {
+  $(window).on('scroll', function () {
+
+    
+    var redLineHeight = lineToDraw.height(),
+    greyLineHeight = greyLine.height(),
+    windowDistance = $(window).scrollTop(),
+    windowHeight = $(window).height() / 2,
+    timelineDistance = $(".timeline").offset().top;
+
+    if(windowDistance >= timelineDistance - windowHeight) {
+      line = windowDistance - timelineDistance + windowHeight;
+
+      if(line <= greyLineHeight) {
+        lineToDraw.css({
+          'height' : line + 20 + 'px'
+        });
+      }
+    }
+
+
+    var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
+    items.each(function(index){
+      var circlePosition = $(this).offset();
+
+      if(bottom > circlePosition.top) {				
+        $(this).addClass('in-view');
+      } else {
+        $(this).removeClass('in-view');
+      }
+    });	
+  });
+}
+
+</script>
 
 
 
