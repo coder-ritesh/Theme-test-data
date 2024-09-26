@@ -1,179 +1,189 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b": {
-      "type": "image-banner",
+    "timeline_qFXKyW": {
+      "type": "timeline",
       "blocks": {
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Generated test data",
-            "heading_size": "h1"
-          }
-        },
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1": {
+        "text_VRhPpF": {
           "type": "text",
           "settings": {
-            "text": "A theme and populated test store by Shopify to help you test commerce primitives.",
-            "text_style": "body"
+            "leftTitle": "2002",
+            "leftSubTitle": "",
+            "leftContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           }
         },
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2": {
-          "type": "buttons",
+        "text_RxDiBC": {
+          "type": "text",
           "settings": {
-            "button_label_1": "Shop products",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "leftTitle": "2004",
+            "leftSubTitle": "",
+            "leftContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "text_UtNDBm": {
+          "type": "text",
+          "settings": {
+            "leftTitle": "2006",
+            "leftSubTitle": "",
+            "leftContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           }
         }
       },
       "block_order": [
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0",
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1",
-        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2"
-      ],
-      "custom_css": [
-
+        "text_VRhPpF",
+        "text_RxDiBC",
+        "text_UtNDBm"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-left",
-        "show_text_box": true,
-        "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "<strong>Featured products<\/strong>",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "automated-collection",
-        "products_to_show": 10,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "color_scheme": "background-1"
       }
     },
-    "f1552b18-6017-4231-810d-74e61da22c37": {
-      "type": "image-with-text",
+    "1e6fc4e2-9773-49d3-ab97-98904296aeb3": {
+      "type": "double-slider",
       "blocks": {
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-0": {
-          "type": "heading",
+        "aa61f6d1-2d25-4d39-85af-c949bf47e339": {
+          "type": "image_picker",
           "settings": {
-            "heading": "Stay hydrated",
-            "heading_size": "h1"
+            "block-image": "shopify:\/\/shop_images\/ValerianDucourtil_Mayrhofen_2Z7A2508_MattGEORGES-featured.jpg"
           }
         },
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1": {
-          "type": "text",
+        "4bac3a28-0569-41ad-8140-280fbf766aef": {
+          "type": "image_picker",
           "settings": {
-            "text": "<p>Try our wax subscription so you can fly high, but never dry.<\/p>",
-            "text_style": "body"
+            "block-image": "shopify:\/\/shop_images\/sliced-pumpkin-pie.jpg"
           }
         },
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-2": {
-          "type": "button",
+        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2": {
+          "type": "image_picker",
           "settings": {
-            "button_label": "Get waxy now",
-            "button_link": "shopify:\/\/products\/selling-plans-ski-wax"
+            "block-image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
+          }
+        },
+        "edb79142-125f-4184-881d-54849c33322d": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/urban-mens-fashion-on-young-adult.jpg"
+          }
+        },
+        "c50a2323-3e18-4d69-938a-2cd2cf86b689": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-covered-black-rocked-peaks.jpg"
+          }
+        },
+        "36cb8f87-f554-4ed0-a65a-63c8133da2ec": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-boarder-on-snowy-mountain.jpg"
+          }
+        },
+        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/stream-water-passing-through-cliffs.jpg"
+          }
+        },
+        "526936bb-ea8a-476e-9420-481e91dad757": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/where-the-street-have-no-snow.jpg"
+          }
+        },
+        "0ae27309-7527-40c2-bda9-8cc4309982b0": {
+          "type": "image_picker",
+          "settings": {
+            "block-image": "shopify:\/\/shop_images\/snow-dusted-wreath-on-white.jpg"
           }
         }
       },
       "block_order": [
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-0",
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1",
-        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-2"
+        "aa61f6d1-2d25-4d39-85af-c949bf47e339",
+        "4bac3a28-0569-41ad-8140-280fbf766aef",
+        "82c60b14-67e1-4838-bf3f-e3bb1e1f4ec2",
+        "edb79142-125f-4184-881d-54849c33322d",
+        "c50a2323-3e18-4d69-938a-2cd2cf86b689",
+        "36cb8f87-f554-4ed0-a65a-63c8133da2ec",
+        "4afa793e-89f2-4b54-b6bc-3c12e5e2a6fc",
+        "526936bb-ea8a-476e-9420-481e91dad757",
+        "0ae27309-7527-40c2-bda9-8cc4309982b0"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "accent-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "38cdf60f-e431-43b5-aac3-7e6215447d67": {
-      "type": "collection-list",
-      "blocks": {
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "hydrogen"
-          }
-        },
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "automated-collection"
-          }
-        }
-      },
-      "block_order": [
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0",
-        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1"
-      ],
-      "settings": {
-        "title": "<strong>Collections<\/strong>",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 2,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
+        "columns_desktop": 3,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "cab05318-91c7-4ddc-a57f-d1befd526698": {
       "type": "designed-image-with-image",
+      "blocks": {
+        "57e1cce7-2e5e-4787-a772-eb947740a962": {
+          "type": "text",
+          "settings": {
+            "tab-name": "what is snowboarding?",
+            "tab-content": "<p>Snowboarding is an exhilarating winter sport that combines elements of surfing, skateboarding, and skiing. Riders, known as snowboarders, glide down snow-covered slopes on a single, specialized board attached to both feet, facing sideways. This unique approach to navigating the mountains provides an entirely different experience compared to traditional skiing. Snowboarders use their body movements and weight shifts to control their direction and speed, making it a dynamic and versatile sport.<br\/><br\/>The origins of snowboarding can be traced back to the 1960s, but it gained significant popularity in the 1980s, with advancements in board design and the establishment of snowboard parks and competitions. Today, snowboarding is a well-loved winter pastime enjoyed by people of all ages and skill levels. Whether carving graceful turns on groomed runs or conquering challenging terrain in the backcountry, snowboarding offers an adrenaline rush, an intimate connection with nature, and a tight-knit community of enthusiasts. It's not just a sport; it's a lifestyle for those who crave adventure on the slopes.<\/p>"
+          }
+        },
+        "fbebdbd9-1622-4f57-8ac3-69b72e000e0a": {
+          "type": "text",
+          "settings": {
+            "tab-name": "maintain snowboard",
+            "tab-content": "<p>Maintaining your snowboard is crucial for ensuring a safe and enjoyable ride on the slopes. To keep your snowboard in top condition, follow these steps. First, regularly inspect your board for any signs of damage, such as dings, cracks, or delaminations. If you find any issues, it's essential to address them promptly. Next, keep the edges sharp by using a diamond stone or file to remove burrs and maintain a consistent edge angle. This will improve your board's grip on the snow. Additionally, regularly wax your snowboard to keep the base hydrated and smooth for better gliding. Scrub off any dirt or debris from the base and apply a high-quality snowboard wax evenly, then scrape off the excess. Finally, make sure your bindings are securely fastened and that all hardware is in good condition. Regular maintenance will extend the life of your snowboard and enhance your performance on the mountain.<\/p>"
+          }
+        },
+        "fd3413bc-6af1-4b6e-bb66-12d75ebeb54e": {
+          "type": "text",
+          "settings": {
+            "tab-name": "how to use wax on snowboard?",
+            "tab-content": "<p>Waxing a snowboard is an essential part of maintenance for any snowboarder looking to optimize their performance on the slopes. To do this, you'll need a few key tools and some basic know-how. Begin by securing your snowboard in a stable position, ensuring it's clean and dry. Then, select an appropriate wax for the snow conditions – colder temperatures require harder wax, while warmer conditions call for softer wax. Use a waxing iron to melt the wax onto the base of your snowboard, maintaining a constant, controlled temperature to avoid damaging the board. Once the wax is evenly spread across the base, wait for it to cool and harden. Finally, scrape off the excess wax with a plastic scraper and buff the base with a brush to achieve a smooth finish. Properly waxed snowboards glide effortlessly, offering better control and enhanced speed, making your time on the mountain even more enjoyable. Regular waxing ensures your board's longevity and top-notch performance.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "57e1cce7-2e5e-4787-a772-eb947740a962",
+        "fbebdbd9-1622-4f57-8ac3-69b72e000e0a",
+        "fd3413bc-6af1-4b6e-bb66-12d75ebeb54e"
+      ],
       "settings": {
         "name": "",
         "new-name": "",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false
       }
+    },
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=ysB0-Q3CJks",
+        "cover_image": "shopify:\/\/shop_images\/ValerianDucourtil_Mayrhofen_2Z7A2508_MattGEORGES-featured.jpg",
+        "description": "snowboarding video",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
-    "featured_collection",
-    "f1552b18-6017-4231-810d-74e61da22c37",
-    "38cdf60f-e431-43b5-aac3-7e6215447d67",
-    "cab05318-91c7-4ddc-a57f-d1befd526698"
+    "timeline_qFXKyW",
+    "1e6fc4e2-9773-49d3-ab97-98904296aeb3",
+    "cab05318-91c7-4ddc-a57f-d1befd526698",
+    "3e7eba93-fb68-4b6d-ad1d-ff8f86781ff1"
   ]
 }

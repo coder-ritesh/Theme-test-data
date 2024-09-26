@@ -1,0 +1,201 @@
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+<style>
+ .collection-list .slider-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+   .collection-list .slider-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+  
+  
+}
+  
+</style>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+  
+-%}
+
+<div class="main-div">
+  <div class="page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
+     <div class="main-inner title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+        <slider-component class="slider-mobile-gutter zoom-gallery">
+            <ul
+              class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+              id="Slider-{{ section.id }}"
+              role="list"
+            >
+              {%- liquid
+                assign columns = section.blocks.size
+                if columns > 3
+                  assign columns = 3
+                endif
+              -%}
+              {%- for block in section.blocks -%}
+                <li
+                  id="Slide-{{ section.id }}-{{ forloop.index }}"
+                  class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="slider-image">
+                     {% if block.settings.block-image %}
+                        <a href="{{ block.settings.block-image |  image_url: width:1024 }}" title="{{ block.settings.block-image.alt }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
+                          <img src="{{ block.settings.block-image |  image_url: width:1024  }}" alt="{{ block.settings.block-image.alt }}" loading="lazy"/></a>
+                  {% endif %}
+                  </div>
+                </li>
+              {%- endfor -%}
+            </ul>
+            {%- if show_mobile_slider -%}
+              <div class="slider-buttons no-js-hidden">
+                <button
+                  type="button"
+                  class="slider-button slider-button--prev"
+                  name="previous"
+                  aria-label="{{ 'general.slider.previous_slide' | t }}"
+                >
+                  {% render 'icon-caret' %}
+                </button>
+                <div class="slider-counter caption">
+                  <span class="slider-counter--current">1</span>
+                  <span aria-hidden="true"> / </span>
+                  <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                  <span class="slider-counter--total">{{ section.blocks.size }}</span>
+                </div>
+                <button
+                  type="button"
+                  class="slider-button slider-button--next"
+                  name="next"
+                  aria-label="{{ 'general.slider.next_slide' | t }}"
+                >
+                  {% render 'icon-caret' %}
+                </button>
+              </div>
+            {%- endif -%}
+          </slider-component>
+     </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+	$('.zoom-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+});
+</script>
+
+{% schema %}
+{
+    "name":"Double slider",
+    "class":"double-slider",
+    "settings":[
+        {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.collection-list.settings.swipe_on_mobile.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.collection-list.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],
+    "blocks":[
+        {
+            "type":"image_picker",
+            "name":"Image",
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"block-image",
+                    "label":"Image"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Double slider"
+        }
+    ]
+}
+{% endschema %}

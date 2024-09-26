@@ -1,0 +1,68 @@
+.timelines .timeline {
+  padding: 50px;
+}
+
+.timelines .default-line {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: grey;
+  height: 1500px;
+}
+
+.timelines .draw-line {
+  width: 4px;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  background: green;
+}
+
+.timelines ul {
+  padding: 0;
+}
+
+.timelines ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  margin: 0 auto;
+  height: 400px;
+  background: transparent;
+}
+
+.timelines .in-view {
+  // background-color: $color-red;
+  @include global-transition;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-image: url("https://cdn.shopify.com/s/files/1/0632/1645/1773/files/svgviewer-png-output.png?v=1725944669");
+    background-color: green;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include global-transition;
+  }
+}
+&::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: inherit;
+  background: grey;
+  transition: all 0.4s ease-in-out;
+}

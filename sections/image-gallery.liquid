@@ -1,0 +1,142 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="gallery-section">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="image-gallery zoom-gallery swiper mySwiper">
+      <div class="swiper-wrapper">   
+        {% for block in section.blocks %}
+           <div class="swiper-slide">
+            <a href="{{ block.settings.image-gallery |  image_url: width:1024 }}" title="{{ block.settings.image-gallery.alt }}" data-source="http://500px.com/photo/32736307"  style="width:193px;height:125px;">
+             <img src="{{ block.settings.image-gallery |  image_url: width:1024 }}" width="1024" height="1024" alt="{{ block.settings.image-gallery.alt }}" loading="lazy" />
+            </a></div>
+        {% endfor %} 
+      </div> 
+    </div>
+  </div>
+</div>
+
+<script>
+   $(document).ready(function() {
+	$('.zoom-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+    sliderPerView:1,
+    loop:true,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+    // when window width is >= 320px
+    425:{
+      slidesPerView:1,
+      spaceBetween:20
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 480px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    // when window width is >= 640px
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 50
+    }
+  }
+      });
+</script>
+
+
+{% schema %}
+{
+  "name":"Image Gallery",
+  "class":"image-pop-gallery",
+  "settings":[
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks":[
+    {
+        "type":"image_picker",
+        "name":"Image",
+        "settings":[
+            {
+                "type":"image_picker",
+                "id":"image-gallery",
+                "label":"Image"
+            }
+        ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Image Gallery"
+    }
+  ]
+}
+{% endschema %}    
